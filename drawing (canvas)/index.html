@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            overflow-x:hidden;
+            margin:0;
+        }
+       
+        canvas{
+            border: 2px solid black;
+            margin:15px 0 0 15px;
+        }
+        .tools{
+            margin-top:30px;
+            padding:30px;
+
+        }
+        .tools h3{
+            margin-right: 30px;
+        }
+        .tools .c{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .download-wrapper{
+            display:flex;
+            justify-content: end;
+            align-items: center;
+        }
+        .saveButton{
+
+         padding: 10px;
+         border:2px solid grey;
+         display:inline-block;
+         border-radius: 5px;
+         text-transform: uppercase;
+         text-decoration: none;
+         color:royalblue ;
+         font-family:verdana;
+      
+        }
+        @media screen and (max-width: 550px)
+        {
+           .saveButton{
+                width: 100%;
+                text-align: center;
+            }
+        }
+        
+    </style>
+    <script src="script.js" defer></script>
+</head>
+<body>
+   
+  <canvas> </canvas>
+    
+    <div class="tools">
+        <div class="download-wrapper">
+                <a href="#" class="saveButton" download="true">download your work</a>
+        </div>
+        <div class="c">
+            <h3> Color :</h3>
+            <input type="color" oninput="changeColor()">
+
+        </div>
+        <div class="c">
+            <h3> Size :</h3>
+            <input type="range" min="1" max="50" value="5" oninput="changeWidth()">
+            <h4></h4>
+        </div>
+        <div class="c">
+            <h3> Eraser :</h3>
+            <input type="checkbox" oninput="erase()">
+        </div>
+        <div class="c">
+            <h3> Colorful line:</h3>
+            <input type="checkbox"  id="colorful" oninput="selectColorful()">
+        </div>
+        
+
+
+    </div>
+</body>
+</html>
